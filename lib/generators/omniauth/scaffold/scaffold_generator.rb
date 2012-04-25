@@ -5,14 +5,9 @@ module Omniauth
     class ScaffoldGenerator < ::Rails::Generators::Base
 
       source_root File.expand_path("../templates", __FILE__)
-      desc "This generator installs Twitter Bootstrap to Asset Pipeline"
-      
-      attr_reader :app_name
+      desc "This generator scaffold to use OmniAuth"
       
       def generate_scaffold
-        app = ::Rails.application
-        @app_name = app.class.to_s.split("::").first
-
         copy_file "config/initializers/omniauth.rb", "config/initializers/omniauth.rb"
         copy_file "config/initializers/local_setting.rb", "config/initializers/local_setting.rb"
         copy_file "config/initializers/constants.rb", "config/initializers/constants.rb"
