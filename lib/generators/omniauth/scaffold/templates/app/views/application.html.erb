@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%# ----- 追加 ----- %>
+<% if current_user %>
+  <%# ログイン済み %>
+  <%= current_user.name %> : 
+   || <%= link_to "Logout" , logout_path %>
+<% else %>
+  <%# 未ログイン %>
+  <%= link_to "Login", "/auth/#{DEFAULT_PROVIDER}" %>
+<% end %>
+
+<%# 通知／エラーメッセージ %>
+<%= simple_format( flash[:notice], style: "color: green;" ) unless flash[:notice].blank? %>
+<%= simple_format( flash[:alert], style: "color: red;" ) unless flash[:alert].blank? %>
+<%# ----- ／追加 ----- %>
+
+<%= yield %>
+
+</body>
+</html>
