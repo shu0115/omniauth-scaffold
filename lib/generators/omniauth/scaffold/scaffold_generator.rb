@@ -13,7 +13,7 @@ module Omniauth
         copy_file "config/initializers/constants.rb", "config/initializers/constants.rb"
         
         content = File.read( "config/routes.rb" )
-        insert_into_file "config/routes.rb", content, :after => "# first created -> highest priority.\n"
+        insert_into_file "config/routes.rb", content, after: "priority.\n"
         
         copy_file "db/migrate/create_users.rb", "db/migrate/20000101000000_create_users.rb"
         copy_file "app/models/user.rb", "app/models/user.rb"
