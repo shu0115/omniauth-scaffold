@@ -1,6 +1,6 @@
 = omniauth-scaffold
 
-Description goes here.
+Scaffold to use OmniAuth.
 
 == Contributing to omniauth-scaffold
  

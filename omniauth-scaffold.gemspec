@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shun Matsumoto"]
-  s.date = "2012-04-25"
+  s.date = "2012-04-26"
   s.description = "Scaffold to use OmniAuth."
   s.email = "s.matsumoto0115@gmail.com"
   s.extra_rdoc_files = [
@@ -25,15 +25,18 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/generators/omniauth/scaffold/scaffold_generator.rb",
+    "lib/generators/omniauth/scaffold/templates/README.rdoc",
     "lib/generators/omniauth/scaffold/templates/app/controllers/application_controller.rb",
     "lib/generators/omniauth/scaffold/templates/app/controllers/sessions_controller.rb",
+    "lib/generators/omniauth/scaffold/templates/app/controllers/top_controller.rb",
     "lib/generators/omniauth/scaffold/templates/app/models/user.rb",
     "lib/generators/omniauth/scaffold/templates/app/views/layouts/application.html.erb",
+    "lib/generators/omniauth/scaffold/templates/app/views/top/index.html.erb",
     "lib/generators/omniauth/scaffold/templates/config/initializers/constants.rb",
     "lib/generators/omniauth/scaffold/templates/config/initializers/local_setting.rb",
     "lib/generators/omniauth/scaffold/templates/config/initializers/omniauth.rb",
-    "lib/generators/omniauth/scaffold/templates/config/routes.rb",
     "lib/generators/omniauth/scaffold/templates/db/migrate/create_users.rb",
+    "omniauth-scaffold.gemspec",
     "spec/omniauth-scaffold_spec.rb",
     "spec/spec_helper.rb"
   ]
