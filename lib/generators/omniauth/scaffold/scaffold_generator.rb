@@ -20,7 +20,9 @@ module Omniauth
         copy_file "app/models/user.rb", "app/models/user.rb"
         copy_file "app/controllers/sessions_controller.rb", "app/controllers/sessions_controller.rb"
         copy_file "app/controllers/application_controller.rb", "app/controllers/application_controller.rb"
+        copy_file "app/controllers/top_controller.rb", "app/controllers/top_controller.rb"
         copy_file "app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
+        copy_file "app/views/top/index.html.erb", "app/views/top/index.html.erb"
       end
     end
   end
