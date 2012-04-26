@@ -23,6 +23,10 @@ module Omniauth
         copy_file "app/controllers/top_controller.rb", "app/controllers/top_controller.rb"
         copy_file "app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
         copy_file "app/views/top/index.html.erb", "app/views/top/index.html.erb"
+        
+        remove_file 'public/index.html'
+        remove_file 'README'
+        copy_file "README.rdoc", "README.rdoc"
       end
     end
   end
