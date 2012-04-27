@@ -5,27 +5,27 @@
 
 Gem::Specification.new do |s|
   s.name = "omniauth-scaffold"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shun Matsumoto"]
   s.date = "2012-04-27"
-  s.description = "Scaffold to use OmniAuth."
+  s.description = "Scaffold for OmniAuth."
   s.email = "s.matsumoto0115@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     ".rspec",
     "Gemfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/generators/omniauth/scaffold/scaffold_generator.rb",
-    "lib/generators/omniauth/scaffold/templates/README.rdoc",
+    "lib/generators/omniauth/scaffold/templates/README.md",
     "lib/generators/omniauth/scaffold/templates/app/controllers/application_controller.rb",
     "lib/generators/omniauth/scaffold/templates/app/controllers/sessions_controller.rb",
     "lib/generators/omniauth/scaffold/templates/app/controllers/top_controller.rb",
