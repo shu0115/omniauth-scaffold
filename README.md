@@ -31,7 +31,7 @@ Edit: config/initializers/constants.rb
 APP_NAME = "YOUR_APP_NAME"
 ```
 
-[ Development ]
+[ Development ]  
 Edit: config/initializers/local_setting.rb
 
 ```ruby
@@ -39,7 +39,7 @@ ENV['TWITTER_KEY'] = "YOUR_CONSUMER_KEY"
 ENV['TWITTER_SECRET'] = "YOUR_CONSUMER_SECRET"
 ```
 
-[ Production ]
+[ Production ]  
 Edit: config/initializers/omniauth.rb
 
 ```ruby

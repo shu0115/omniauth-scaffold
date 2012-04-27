@@ -5,7 +5,7 @@ module Omniauth
     class ScaffoldGenerator < ::Rails::Generators::Base
 
       source_root File.expand_path("../templates", __FILE__)
-      desc "This generator scaffold to use OmniAuth"
+      desc "This generator scaffold for OmniAuth"
       
       def generate_scaffold
         copy_file "config/initializers/omniauth.rb", "config/initializers/omniauth.rb"

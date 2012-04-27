@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/shu0115/omniauth-scaffold"
   gem.license = "MIT"
   gem.summary = "OmniAuth Scaffold"
-  gem.description = "Scaffold to use OmniAuth."
+  gem.description = "Scaffold for OmniAuth."
   gem.email = "s.matsumoto0115@gmail.com"
   gem.authors = ["Shun Matsumoto"]
   # dependencies defined in Gemfile
