@@ -20,7 +20,7 @@ APP_DESCRIPTION
 
 ### Twitterアプリ登録
 
-https://dev.twitter.com/apps/new
+<a href="https://dev.twitter.com/apps/new" target="_blank">https://dev.twitter.com/apps/new</a>
 
     Name: [ (アプリケーションの名前) ]
     Description: [ (アプリケーションの説明) ]
@@ -41,9 +41,7 @@ Edit: config/initializers/local_setting.rb
 
 ※Twitterアプリ登録完了後に表示された「Consumer key」を「YOUR_CONSUMER_KEY」に、「Consumer secret」を「YOUR\_CONSUMER_SECRET」にそれぞれ入力
 
-### 定数定義設定
-
-アプリ名設定
+### アプリ名設定
 
 Edit: config/initializers/constants.rb
 
@@ -71,6 +69,4 @@ Gemインストール
 
 ## Copyright
 
-Copyright (c) 2012 MY NAME. CC BY-NC-SA 2.1
-
-http://creativecommons.org/licenses/by-nc-sa/2.1/jp/
+Copyright (c) 2012 MY NAME. <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a>
