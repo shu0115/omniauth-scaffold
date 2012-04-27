@@ -13,7 +13,7 @@ module Omniauth
         copy_file "config/initializers/constants.rb", "config/initializers/constants.rb"
         
         insert_into_file "config/routes.rb", "  match \"/auth/:provider/callback\" => \"sessions#callback\"\n  match \"/auth/failure\" => \"sessions#failure\"\n  match \"/logout\" => \"sessions#destroy\", :as => :logout\n", after: "# first created -> highest priority.\n"
-        insert_into_file "config/routes.rb", "  root :to => 'top#index'\n", after: "# root :to => 'welcome#index'\n"
+        insert_into_file "config/routes.rb", "  root to: 'top#index'\n", after: "# root :to => 'welcome#index'\n"
         insert_into_file "config/routes.rb", "  match ':controller(/:action(/:id))(.:format)'\n", after: "# match ':controller(/:action(/:id))(.:format)'\n"
         
         copy_file "db/migrate/create_users.rb", "db/migrate/20000101000000_create_users.rb"

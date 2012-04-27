@@ -48,4 +48,8 @@ pkg
 # For rubinius:
 #*.rbc
 
+# Gem
 Gemfile.lock
+
+# Backup File
+_____*
