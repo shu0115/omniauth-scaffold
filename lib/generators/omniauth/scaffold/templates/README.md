@@ -20,7 +20,7 @@ APP_DESCRIPTION
 
 ### Twitterアプリ登録
 
-<a href="https://dev.twitter.com/apps/new" target="_blank">https://dev.twitter.com/apps/new</a>
+<a href="https://dev.twitter.com/apps/new" target="_blank">Twitter Create an application</a>
 
     Name: [ (アプリケーションの名前) ]
     Description: [ (アプリケーションの説明) ]
