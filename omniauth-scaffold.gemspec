@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "omniauth-scaffold"
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shun Matsumoto"]
@@ -13,14 +13,12 @@ Gem::Specification.new do |s|
   s.description = "Scaffold for OmniAuth."
   s.email = "s.matsumoto0115@gmail.com"
   s.extra_rdoc_files = [
-    "LICENSE.txt",
     "README.md"
   ]
   s.files = [
     ".document",
     ".rspec",
     "Gemfile",
-    "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
@@ -41,7 +39,7 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/shu0115/omniauth-scaffold"
-  s.licenses = ["MIT"]
+  s.licenses = ["CC BY-NC-SA 2.1"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.23"
   s.summary = "OmniAuth Scaffold"
