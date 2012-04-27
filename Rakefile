@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "omniauth-scaffold"
   gem.homepage = "http://github.com/shu0115/omniauth-scaffold"
-  gem.license = "MIT"
+  gem.license = "CC BY-NC-SA 2.1"
   gem.summary = "OmniAuth Scaffold"
   gem.description = "Scaffold for OmniAuth."
   gem.email = "s.matsumoto0115@gmail.com"

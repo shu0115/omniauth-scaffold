@@ -71,4 +71,6 @@ Gemインストール
 
 ## Copyright
 
-Copyright (c) 2012 MY NAME.
+Copyright (c) 2012 MY NAME. CC BY-NC-SA 2.1
+
+http://creativecommons.org/licenses/by-nc-sa/2.1/jp/

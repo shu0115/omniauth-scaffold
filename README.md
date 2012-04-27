@@ -4,14 +4,16 @@ Scaffold for OmniAuth.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add: Gemfile
 
 ```ruby
 gem 'omniauth-scaffold'
 gem 'omniauth-twitter'
+#gem 'omniauth-github'
+#gem 'omniauth-facebook'
 ```
 
-And then execute:
+Execute:
 
     $ bundle
 
@@ -31,12 +33,25 @@ Edit: config/initializers/constants.rb
 APP_NAME = "YOUR_APP_NAME"
 ```
 
+Twitter: https://dev.twitter.com/apps/new
+GitHub: https://github.com/account/applications/new
+Facebook: https://developers.facebook.com/apps
+
 [ Development ]  
 Edit: config/initializers/local_setting.rb
 
 ```ruby
+# Twitter
 ENV['TWITTER_KEY'] = "YOUR_CONSUMER_KEY"
 ENV['TWITTER_SECRET'] = "YOUR_CONSUMER_SECRET"
+
+# GitHub
+#ENV['GITHUB_CLIENT_ID'] = "YOUR_CLIENT_ID"
+#ENV['GITHUB_SECRET'] = "YOUR_SECRET"
+
+# Facebook
+#ENV['FACEBOOK_APP_ID'] = "YOUR_APP_ID"
+#ENV['FACEBOOK_APP_SECRET'] = "YOUR_APP_SECRET"
 ```
 
 [ Production ]  
@@ -44,8 +59,9 @@ Edit: config/initializers/omniauth.rb
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :developer unless Rails.env.production?
   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
+#  provider :github, ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_SECRET']
+#  provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
 end
 ```
 
@@ -59,5 +75,4 @@ end
 
 ## Copyright
 
-Copyright (c) 2012 Shun Matsumoto. See LICENSE.txt for
-further details.
+Copyright (c) 2012 Shun Matsumoto. <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a>
