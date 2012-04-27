@@ -26,6 +26,8 @@ module Omniauth
         
         remove_file 'public/index.html'
         copy_file "README.rdoc", "README.rdoc"
+        
+        insert_into_file ".gitignore", "\n# Add\n.DS_Store\n/config/initializers/local_setting.rb\n", after: "/tmp\n"
       end
     end
   end
