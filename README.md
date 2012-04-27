@@ -66,6 +66,17 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
+[ Heroku ]
+
+    heroku config:add TWITTER_KEY=YOUR_CONSUMER_KEY
+    heroku config:add TWITTER_SECRET=YOUR_CONSUMER_SECRET
+----
+    heroku config:add GITHUB_CLIENT_ID=YOUR_CLIENT_ID
+    heroku config:add GITHUB_SECRET=YOUR_SECRET
+----
+    heroku config:add FACEBOOK_APP_ID=YOUR_APP_ID
+    heroku config:add FACEBOOK_APP_SECRET=YOUR_APP_SECRET
+
 ## Contributing
 
 1. Fork it
