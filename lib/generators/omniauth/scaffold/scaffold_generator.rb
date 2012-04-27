@@ -25,7 +25,8 @@ module Omniauth
         copy_file "app/views/top/index.html.erb", "app/views/top/index.html.erb"
         
         remove_file 'public/index.html'
-        copy_file "README.rdoc", "README.rdoc"
+        remove_file 'README.rdoc'
+        copy_file "README.md", "README.md"
         
         insert_into_file ".gitignore", "\n# Add\n.DS_Store\n/config/initializers/local_setting.rb\n", after: "/tmp\n"
       end
