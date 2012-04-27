@@ -1,6 +1,4 @@
 # encoding: utf-8
-require 'openssl'
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 require 'rubygems'
 require 'bundler'
