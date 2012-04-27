@@ -33,9 +33,10 @@ Edit: config/initializers/constants.rb
 APP_NAME = "YOUR_APP_NAME"
 ```
 
-Twitter: https://dev.twitter.com/apps/new  
-GitHub: https://github.com/account/applications/new  
-Facebook: https://developers.facebook.com/apps  
+[ Keys ]  
+<a href="https://dev.twitter.com/apps/new" target="_blank">Twitter</a>  
+<a href="https://github.com/account/applications/new" target="_blank">GitHub</a>  
+<a href="https://developers.facebook.com/apps" target="_blank">Facebook</a>  
 
 [ Development ]  
 Edit: config/initializers/local_setting.rb
