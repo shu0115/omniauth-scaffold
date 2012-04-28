@@ -35,7 +35,7 @@ APP_NAME = "YOUR_APP_NAME"
 
 [ Keys ]  
 <a href="https://dev.twitter.com/apps/new" target="_blank">Twitter</a>  
-<a href="https://github.com/account/applications/new" target="_blank">GitHub</a>  
+<a href="https://github.com/settings/applications/new" target="_blank">GitHub</a>  
 <a href="https://developers.facebook.com/apps" target="_blank">Facebook</a>  
 
 [ Development ]  
