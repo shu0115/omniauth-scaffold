@@ -4,7 +4,7 @@ Scaffold for OmniAuth.
 
 ## Installation
 
-Add: Gemfile
+Edit: Gemfile
 
 ```ruby
 gem 'omniauth-scaffold'
