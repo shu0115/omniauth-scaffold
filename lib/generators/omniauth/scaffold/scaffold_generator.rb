@@ -17,12 +17,18 @@ module Omniauth
         insert_into_file "config/routes.rb", "  match ':controller(/:action(/:id))(.:format)'\n", after: "# match ':controller(/:action(/:id))(.:format)'\n"
         
         copy_file "db/migrate/create_users.rb", "db/migrate/20000101000000_create_users.rb"
+        
         copy_file "app/models/user.rb", "app/models/user.rb"
+        
         copy_file "app/controllers/sessions_controller.rb", "app/controllers/sessions_controller.rb"
         copy_file "app/controllers/application_controller.rb", "app/controllers/application_controller.rb"
         copy_file "app/controllers/top_controller.rb", "app/controllers/top_controller.rb"
+        
         copy_file "app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
         copy_file "app/views/top/index.html.erb", "app/views/top/index.html.erb"
+        
+        copy_file "app/assets/stylesheets/base.css.scss", "app/assets/stylesheets/base.css.scss"
+        copy_file "app/assets/stylesheets/scaffolds.css.scss", "app/assets/stylesheets/scaffolds.css.scss"
         
         remove_file 'public/index.html'
         remove_file 'README.rdoc'
