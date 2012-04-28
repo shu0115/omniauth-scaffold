@@ -16,6 +16,8 @@ module Omniauth
         insert_into_file "config/routes.rb", "  root to: 'top#index'\n", after: "# root :to => 'welcome#index'\n"
         insert_into_file "config/routes.rb", "  match ':controller(/:action(/:id))(.:format)'\n", after: "# match ':controller(/:action(/:id))(.:format)'\n"
         
+        insert_into_file "config/environments/development.rb", "config.assets.debug = true\n", after: "  config.assets.debug = false\n"
+        
         copy_file "db/migrate/create_users.rb", "db/migrate/20000101000000_create_users.rb"
         
         copy_file "app/models/user.rb", "app/models/user.rb"

@@ -66,8 +66,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-[ Heroku ]
-
+[ Heroku ]  
 Twitter
 
     heroku config:add TWITTER_KEY=YOUR_CONSUMER_KEY
@@ -82,6 +81,14 @@ Facebook
 
     heroku config:add FACEBOOK_APP_ID=YOUR_APP_ID
     heroku config:add FACEBOOK_APP_SECRET=YOUR_APP_SECRET
+
+Migration:
+
+    $ rake db:migrate
+
+Start Server:
+
+    $ rails s
 
 ## Contributing
 
