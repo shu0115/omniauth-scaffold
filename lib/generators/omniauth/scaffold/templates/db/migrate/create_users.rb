@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :screen_name
       t.string :image
+      t.string :token
+      t.string :secret
       # ----- ／追加 ----- #
 
       t.timestamps
