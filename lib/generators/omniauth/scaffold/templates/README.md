@@ -41,14 +41,6 @@ Edit: config/initializers/local_setting.rb
 
 ※Twitterアプリ登録完了後に表示された「Consumer key」を「YOUR_CONSUMER_KEY」に、「Consumer secret」を「YOUR\_CONSUMER_SECRET」にそれぞれ入力
 
-### アプリ名設定
-
-Edit: config/initializers/constants.rb
-
-    APP_NAME = "YOUR_APP_NAME"
-  
-※「YOUR\_APP_NAME」を自分の作成したアプリ名に修正
-
 ### Rails起動
 
 Gemインストール

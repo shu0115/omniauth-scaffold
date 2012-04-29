@@ -1,7 +1,6 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-      # ----- 追加 ----- #
       t.string :provider
       t.string :uid
       t.string :name
@@ -9,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :image
       t.string :token
       t.string :secret
-      # ----- ／追加 ----- #
 
       t.timestamps
     end
