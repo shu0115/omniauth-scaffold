@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "omniauth-scaffold"
-  s.version = "0.1.7"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shun Matsumoto"]
-  s.date = "2012-04-28"
+  s.date = "2012-04-29"
   s.description = "Scaffold for OmniAuth."
   s.email = "s.matsumoto0115@gmail.com"
   s.extra_rdoc_files = [
@@ -35,6 +35,7 @@ Gem::Specification.new do |s|
     "lib/generators/omniauth/scaffold/templates/config/initializers/constants.rb",
     "lib/generators/omniauth/scaffold/templates/config/initializers/local_setting.rb",
     "lib/generators/omniauth/scaffold/templates/config/initializers/omniauth.rb",
+    "lib/generators/omniauth/scaffold/templates/config/locales/ja.yml",
     "lib/generators/omniauth/scaffold/templates/db/migrate/create_users.rb",
     "omniauth-scaffold.gemspec",
     "spec/omniauth-scaffold_spec.rb",
