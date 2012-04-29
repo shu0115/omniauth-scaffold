@@ -17,6 +17,7 @@ module Omniauth
         insert_into_file "config/routes.rb", "  root to: 'top#index'\n", after: "# root :to => 'welcome#index'\n"
         insert_into_file "config/routes.rb", "  match ':controller(/:action(/:id))(.:format)'\n", after: "# match ':controller(/:action(/:id))(.:format)'\n"
         insert_into_file "config/application.rb", "    config.time_zone = 'Tokyo'\n    config.active_record.default_timezone = :local\n", after: "# config.time_zone = 'Central Time (US & Canada)'\n"
+        insert_into_file "config/application.rb", "    config.i18n.default_locale = :ja\n", after: "# config.i18n.default_locale = :de\n"
         
         copy_file "config/locales/ja.yml", "config/locales/ja.yml"
         
