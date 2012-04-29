@@ -15,17 +15,17 @@ gem 'omniauth-twitter'
 
 Execute:
 
-    $ bundle
+    bundle
 
 Or install it yourself as:
 
-    $ gem install omniauth-scaffold
+    gem install omniauth-scaffold
 
 ## Usage
 
 Generate omniauth scaffold:
 
-    $ rails g omniauth:scaffold
+    rails g omniauth:scaffold
 
 Edit: config/initializers/constants.rb
 
@@ -84,11 +84,11 @@ Facebook
 
 Migration:
 
-    $ rake db:migrate
+    rake db:migrate
 
 Start Server:
 
-    $ rails s
+    rails s
 
 ## Contributing
 
