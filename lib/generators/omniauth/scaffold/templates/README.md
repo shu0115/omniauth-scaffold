@@ -1,6 +1,6 @@
 # APP_NAME
 
-APP_DESCRIPTION
+APP_DESCRIPTION.
 
 ## Local Setting
 
@@ -11,12 +11,12 @@ APP_DESCRIPTION
 ### リポジトリをローカルへ作成
 
     $ cd ~/WORK_DIRECTORY
-    $ git clone git@github.com:MY_USER_NAME/APP_NAME.git
+    $ git clone git@github.com:YOUR_USER_NAME/APP_NAME.git
     $ cd APP_NAME
 
 ### ブランチ作成
 
-    $ git checkout -b MY_NEW_BRANCH
+    $ git checkout -b YOUR_NEW_BRANCH
 
 ### Twitterアプリ登録
 
@@ -45,7 +45,7 @@ Edit: config/initializers/local_setting.rb
 
 Gemインストール
 
-    bundle install
+    bundle install --without production
   
 ローカルDB作成
 
@@ -61,4 +61,4 @@ Gemインストール
 
 ## Copyright
 
-Copyright (c) 2012 MY NAME. <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a>
+Copyright (c) 2012 MY_NAME. <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a>
