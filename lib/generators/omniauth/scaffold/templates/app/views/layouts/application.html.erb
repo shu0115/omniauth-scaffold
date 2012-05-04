@@ -11,6 +11,7 @@
 <%# ----- 追加 ----- %>
 <% if current_user %>
   <%# ログイン済み %>
+  <%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "20x20" ), "https://twitter.com/#!/#{current_user.screen_name}", target: "_blank" ) %>
   <%= current_user.name %> : 
    || <%= link_to "Logout" , logout_path %>
 <% else %>
