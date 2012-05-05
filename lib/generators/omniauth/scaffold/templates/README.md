@@ -33,7 +33,7 @@ APP_DESCRIPTION.
 
 ### ローカル用Twitterキー設定
 
-Edit: config/initializers/local_setting.rb
+Create: config/initializers/local_setting.rb
 
     # Twitter OAuth Local Setting
     ENV['TWITTER_KEY'] = "YOUR_CONSUMER_KEY"
