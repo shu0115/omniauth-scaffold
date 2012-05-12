@@ -26,7 +26,6 @@ module Omniauth
           copy_file "config/initializers/local_setting.rb", "config/initializers/local_setting.rb"
         end
         
-#        copy_file "config/initializers/local_setting.rb", "config/initializers/local_setting.rb"
         copy_file "config/initializers/omniauth.rb", "config/initializers/omniauth.rb"
         copy_file "config/initializers/constants.rb", "config/initializers/constants.rb"
         
