@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'rails/generators'
 
 module Omniauth
@@ -9,8 +10,24 @@ module Omniauth
       
       def generate_scaffold
         # Config
+        if File.exist?('config/initializers/local_setting.rb')
+          content = "\n# Twitter\n"
+          content = "ENV['TWITTER_KEY'] = \"YOUR_CONSUMER_KEY\"\n"
+          content = "ENV['TWITTER_SECRET'] = \"YOUR_CONSUMER_SECRET\"\n\n"
+          content = "# GitHub\n"
+          content = "#ENV['GITHUB_CLIENT_ID'] = \"YOUR_CLIENT_ID\"\n"
+          content = "#ENV['GITHUB_SECRET'] = \"YOUR_SECRET\"\n\n"
+          content = "# Facebook\n"
+          content = "#ENV['FACEBOOK_APP_ID'] = \"YOUR_APP_ID\"\n"
+          content = "#ENV['FACEBOOK_APP_SECRET'] = \"YOUR_APP_SECRET\"\n"
+          
+          append_file "config/initializers/local_setting.rb", content.force_encoding('ASCII-8BIT')
+        else
+          copy_file "config/initializers/local_setting.rb", "config/initializers/local_setting.rb"
+        end
+        
+#        copy_file "config/initializers/local_setting.rb", "config/initializers/local_setting.rb"
         copy_file "config/initializers/omniauth.rb", "config/initializers/omniauth.rb"
-        copy_file "config/initializers/local_setting.rb", "config/initializers/local_setting.rb"
         copy_file "config/initializers/constants.rb", "config/initializers/constants.rb"
         
         insert_into_file "config/routes.rb", "  match \"/auth/:provider/callback\" => \"sessions#callback\"\n  match \"/auth/failure\" => \"sessions#failure\"\n  match \"/logout\" => \"sessions#destroy\", :as => :logout\n", after: "# first created -> highest priority.\n"

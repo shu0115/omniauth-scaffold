@@ -1,3 +1,5 @@
+# coding: utf-8
+
 # Twitter
 ENV['TWITTER_KEY'] = "YOUR_CONSUMER_KEY"
 ENV['TWITTER_SECRET'] = "YOUR_CONSUMER_SECRET"
