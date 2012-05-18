@@ -13,7 +13,7 @@
   <%# ログイン済み %>
   <%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "20x20" ), "https://twitter.com/#!/#{current_user.screen_name}", target: "_blank" ) %>
   <%= current_user.name %> : 
-   || <%= link_to "Logout" , logout_path %>
+   || <%= link_to "Logout", logout_path %>
 <% else %>
   <%# 未ログイン %>
   <%= link_to "Login", "/auth/#{DEFAULT_PROVIDER}" %>
