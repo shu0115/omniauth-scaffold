@@ -29,7 +29,8 @@ module Omniauth
         
         # initializers/constants.rb
         if File.exist?( 'config/initializers/constants.rb' )
-          content = "\n# Production環境\n"
+          content = "\n# OmniAuth Provider\n"
+          content += "# Production環境\n"
           content += "if Rails.env.production?\n"
           content += "  DEFAULT_PROVIDER = \"twitter\"\n"
           content += "  # DEFAULT_PROVIDER = \"facebook\"\n"

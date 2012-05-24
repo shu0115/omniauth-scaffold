@@ -1,5 +1,6 @@
 # coding: utf-8
 
+# OmniAuth Provider
 # Production環境
 if Rails.env.production?
   DEFAULT_PROVIDER = "twitter"
