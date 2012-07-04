@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= Settings.app_name %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if current_user %>
+  <%# ログイン済み %>
+  <%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "20x20" ), "https://twitter.com/#!/#{current_user.screen_name}", target: "_blank" ) %>
+  <%= current_user.screen_name %> :
+   || <%= link_to "Logout", logout_path %>
+<% else %>
+  <%# 未ログイン %>
+  <%= link_to "Login", "/auth/#{Settings.provider}" %>
+<% end %>
+
+<%# 通知／エラーメッセージ %>
+<%= simple_format( flash[:notice], style: "color: green;" ) unless flash[:notice].blank? %>
+<%= simple_format( flash[:alert], style: "color: red;" ) unless flash[:alert].blank? %>
+
+<%= yield %>
+
+<br />
+<br />
+
+<center>
+  Developed by <a href="https://twitter.com/#!/<%= Settings.programmer_twitter_id %>/" target="_blank">@<%= Settings.programmer_twitter_id %></a>,
+  Designed by <a href="https://twitter.com/#!/<%= Settings.designer_twitter_id %>/" target="_blank">@<%= Settings.designer_twitter_id %></a>,
+  Licence by <a href="https://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC BY-NC-SA 2.1</a>
+</center>
+
+</body>
+</html>

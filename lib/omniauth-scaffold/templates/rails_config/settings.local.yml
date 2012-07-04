@@ -1,0 +1,3 @@
+# Twitter OAuth Local Setting
+twitter_key:    "TWITTER_KEY"
+twitter_secret: "TWITTER_SECRET"
