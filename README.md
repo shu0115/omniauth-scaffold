@@ -6,16 +6,17 @@ Scaffold for OmniAuth.
 
 Add this line to your application's Gemfile:
 
-```ruby
+```
 vi Gemfile
-----------
+```
+
+```ruby
 # For OmniAuth
 gem 'rails_config'
 gem 'omniauth-scaffold', :group => :development
 gem 'omniauth-twitter'
 #gem 'omniauth-github'
 #gem 'omniauth-facebook'
-----------
 ```
 
 And then execute:
@@ -80,9 +81,9 @@ app_name: "YOUR_APP_NAME"
 
 ### Keys
 
-<a href="https://dev.twitter.com/apps/new" target="_blank">Twitter</a>
-<a href="https://github.com/settings/applications/new" target="_blank">GitHub</a>
-<a href="https://developers.facebook.com/apps" target="_blank">Facebook</a>
+<a href="https://dev.twitter.com/apps/new" target="_blank">Twitter</a><br />
+<a href="https://github.com/settings/applications/new" target="_blank">GitHub</a><br />
+<a href="https://developers.facebook.com/apps" target="_blank">Facebook</a><br />
 
 ### Development Setting
 
