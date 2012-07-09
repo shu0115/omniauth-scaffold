@@ -2,12 +2,13 @@
 ja:
   # Add
   menu:
-    show: Show
-    edit: Edit
-    destroy: Delete
-    new: New
-    top: Top
-    list: List
+    show: "Show"
+    edit: "Edit"
+    destroy: "Delete"
+    new: "New"
+    top: "Top"
+    list: "List"
+    create: "Create"
 
   date:
     abbr_day_names:
