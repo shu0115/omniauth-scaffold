@@ -5,13 +5,15 @@ require 'rails/generators'
 module Omniauth
   module Generators
     class ScaffoldGenerator < ::Rails::Generators::Base
-      source_root File.expand_path("../omniauth-scaffold", __FILE__)
+      @@gem_path = source_root File.expand_path("../omniauth-scaffold", __FILE__)
       desc "This generator scaffold for OmniAuth"
 
       #-------------------#
       # generate_scaffold #
       #-------------------#
       def generate_scaffold
+        app_name = Rails.application.class.name.split('::').first
+
         # ----- rails_config ----- #
         copy_file( "templates/rails_config/rails_config.rb", "config/initializers/rails_config.rb" )
         copy_file( "templates/rails_config/settings.yml", "config/settings.yml" )
@@ -55,14 +57,15 @@ module Omniauth
         copy_file( "templates/user.rb", "app/models/user.rb" )
 
         # ----- controllers ----- #
-        FileUtils.mv( "app/controllers/application_controller.rb", "app/controllers/application_controller_ORIGINAL.rb" )
-        copy_file( "templates/application_controller.rb", "app/controllers/application_controller.rb" )
+        content = File.read( "#{@@gem_path}/templates/application_controller.rb", encoding: Encoding::UTF_8 )
+        gsub_file "app/controllers/application_controller.rb", /(class ApplicationController < ActionController::Base\n  protect_from_forgery\nend\n)+/, content.force_encoding('ASCII-8BIT')
         copy_file( "templates/sessions_controller.rb", "app/controllers/sessions_controller.rb" )
         copy_file( "templates/top_controller.rb", "app/controllers/top_controller.rb" )
 
         # ----- views ----- #
-        FileUtils.mv( "app/views/layouts/application.html.erb", "app/views/layouts/application_ORIGINAL.html.erb" )
-        copy_file( "templates/application.html.erb", "app/views/layouts/application.html.erb" )
+        content = File.read( "#{@@gem_path}/templates/application.html.erb", encoding: Encoding::UTF_8 )
+        gsub_file "app/views/layouts/application.html.erb", /(<%= yield %>)+/, content.force_encoding('ASCII-8BIT')
+        gsub_file "app/views/layouts/application.html.erb", Regexp.new("<title>#{app_name}</title>"), "<title><%= Settings.app_name %></title>"
         copy_file( "templates/index.html.erb", "app/views/top/index.html.erb" )
 
         # ----- assets ----- #
