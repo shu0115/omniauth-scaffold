@@ -58,10 +58,11 @@ rails g omniauth:scaffold
       create  config/locales/ja.yml
       create  db/migrate/20000101000000_create_users.rb
       create  app/models/user.rb
-      create  app/controllers/application_controller.rb
+        gsub  app/controllers/application_controller.rb
       create  app/controllers/sessions_controller.rb
       create  app/controllers/top_controller.rb
-      create  app/views/layouts/application.html.erb
+        gsub  app/views/layouts/application.html.erb
+        gsub  app/views/layouts/application.html.erb
       create  app/views/top/index.html.erb
       create  app/assets/stylesheets/base.css.scss
       create  app/assets/stylesheets/scaffolds.css.scss
