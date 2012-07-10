@@ -82,8 +82,8 @@ app_name: "YOUR_APP_NAME"
 
 ### Keys
 
-<a href="https://dev.twitter.com/apps/new" target="_blank">Twitter</a><br />
-<a href="https://github.com/settings/applications/new" target="_blank">GitHub</a><br />
+<a href="https://dev.twitter.com/apps" target="_blank">Twitter</a><br />
+<a href="https://github.com/settings/applications" target="_blank">GitHub</a><br />
 <a href="https://developers.facebook.com/apps" target="_blank">Facebook</a><br />
 
 ### Development Setting
