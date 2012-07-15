@@ -45,7 +45,7 @@ module Omniauth
 
         # ----- development.rb ----- #
         content = "\n  # For LogRotate\n"
-        content += "  config.logger = Logger.new( config.paths.log.first, 5, 1*1024*1024 )  # 1MB * 5\n"
+        content += "  config.logger = Logger.new( 'log/development.log', 5, 1*1024*1024 )  # 1MB * 5\n"
         insert_into_file( "config/environments/development.rb", content.force_encoding('ASCII-8BIT'), after: "config.assets.debug = true\n" )
         gsub_file "config/environments/development.rb", /(config.assets.debug = true)+/, "# config.assets.debug = true"
         insert_into_file( "config/environments/development.rb", "  config.assets.debug = false\n", after: "config.assets.debug = true\n" )
