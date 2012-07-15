@@ -9,6 +9,7 @@ ja:
     top: "Top"
     list: "List"
     create: "Create"
+    update: "Update"
 
   date:
     abbr_day_names:
