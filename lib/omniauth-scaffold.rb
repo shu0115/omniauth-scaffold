@@ -86,6 +86,7 @@ module Omniauth
         content = "\n# Add\n"
         content += ".DS_Store\n"
         content += "vendor/bundle\n"
+        content += "/log/*.log.*\n"
         content += "\n# rails_config\n"
         content += "config/settings.local.yml\n"
         content += "config/settings/*.local.yml\n"
