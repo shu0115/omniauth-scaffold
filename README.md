@@ -96,6 +96,14 @@ Edit: config/settings.local.yml
 # Twitter OAuth Local Setting
 twitter_key:    "TWITTER_KEY"
 twitter_secret: "TWITTER_SECRET"
+
+# Facebook OAuth Setting
+facebook_app_id:     "FACEBOOK_APP_ID"
+facebook_app_secret: "FACEBOOK_APP_SECRET"
+
+# GitHub OAuth Setting
+github_client_id: "GITHUB_CLIENT_ID"
+github_secret:    "GITHUB_SECRET"
 ```
 
 ### Production Setting For Heroku
