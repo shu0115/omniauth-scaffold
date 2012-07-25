@@ -1,5 +1,7 @@
 # OmniAuth Provider
 provider: "twitter"
+#provider: "facebook"
+#provider: "github"
 
 # アプリケーション名
 app_name: "YOUR_APP_NAME"
