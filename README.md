@@ -15,8 +15,8 @@ vi Gemfile
 gem 'rails_config'
 gem 'omniauth-scaffold', :group => :development
 gem 'omniauth-twitter'
-#gem 'omniauth-github'
-#gem 'omniauth-facebook'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
 ```
 
 And then execute:
@@ -31,6 +31,8 @@ Or install it yourself as:
 gem install rails_config
 gem install omniauth-scaffold
 gem install omniauth-twitter
+gem install omniauth-facebook
+gem install omniauth-github
 ```
 
 ## Usage
