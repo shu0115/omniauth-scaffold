@@ -74,6 +74,7 @@ module Omniauth
         # ----- assets ----- #
         copy_file( "templates/base.css.scss", "app/assets/stylesheets/base.css.scss" )
         copy_file( "templates/scaffolds.css.scss", "app/assets/stylesheets/scaffolds.css.scss" )
+        copy_file( "templates/z_style.css.scss", "app/assets/stylesheets/z_style.css.scss" )
 
         # ----- public ----- #
         remove_file( 'public/index.html' )
