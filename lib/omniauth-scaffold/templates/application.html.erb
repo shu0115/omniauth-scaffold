@@ -7,7 +7,7 @@
           <li><%= link_to Settings.app_name, :root, class: "brand" %></li>
           <% unless session[:user_id].blank? %>
             <%# ログイン済み %>
-            <li><%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "20x20" ), "https://twitter.com/#!/#{current_user.screen_name}", target: "_blank" ) %></li>
+            <li><%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "20x20" ), "https://twitter.com/#{current_user.screen_name}", target: "_blank" ) %></li>
             <li class="<%= params[:controller] == "controllers" ? "active" : "" %>"><%= link_to( "controllers", { controller: "controllers" } ) %></li>
             <li><%= link_to( "Logout", logout_path ) %></li>
           <% else %>
