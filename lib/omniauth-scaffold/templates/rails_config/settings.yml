@@ -3,6 +3,11 @@ provider: "twitter"
 #provider: "facebook"
 #provider: "github"
 
+# Provider Page URL
+provider_page: "https://twitter.com/"
+#provider_page: "https://www.facebook.com/"
+#provider_page: "https://github.com/"
+
 # アプリケーション名
 app_name: "YOUR_APP_NAME"
 
