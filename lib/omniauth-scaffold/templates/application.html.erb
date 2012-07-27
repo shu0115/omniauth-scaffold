@@ -1,25 +1,20 @@
+  <%# グローバルメニュー %>
+  <ul class="nav nav-tabs navbar-fixed-top backcolor_white padding_top10">
+    <li class="navbar offset2 <%= params[:controller] == 'top' ? 'active' : '' %>"><%= link_to Settings.app_name, :root, class: "brand" %></li>
+    <% unless session[:user_id].blank? %>
+      <%# ログイン済み %>
+      <li><%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "18x18", class: "margin0" ), "#{Settings.provider_page}#{current_user.screen_name}", target: "_blank" ) %></li>
+      <li class="<%= params[:controller] == 'controllers' ? 'active' : '' %>"><%= link_to( "controllers", { controller: "controllers" } ) %></li>
+      <li><%= link_to( "Logout", logout_path ) %></li>
+    <% else %>
+      <%# 未ログイン %>
+      <li><%= link_to "Login", "/auth/#{Settings.provider}" %></li>
+    <% end %>
+  </ul>
+
   <div class="container">
 
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul class="nav">
-          <li><%= link_to Settings.app_name, :root, class: "brand" %></li>
-          <% unless session[:user_id].blank? %>
-            <%# ログイン済み %>
-            <li><%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "20x20" ), "#{Settings.provider_page}#{current_user.screen_name}", target: "_blank" ) %></li>
-            <li class="<%= params[:controller] == "controllers" ? "active" : "" %>"><%= link_to( "controllers", { controller: "controllers" } ) %></li>
-            <li><%= link_to( "Logout", logout_path ) %></li>
-          <% else %>
-            <%# 未ログイン %>
-            <li><%= link_to "Login", "/auth/#{Settings.provider}" %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div style="margin: 50px 0px 0px 0px;"><div>
+  <div class="margin_top50"><div>
 
   <%# 通知／エラーメッセージ %>
   <%= simple_format( flash[:notice], style: "color: green;" ) unless flash[:notice].blank? %>
