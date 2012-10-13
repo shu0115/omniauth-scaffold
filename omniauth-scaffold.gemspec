@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Omniauth::Scaffold::VERSION
 
-  gem.add_dependency 'rails_config'
+  gem.add_dependency 'rails_config', "0.3.0"
   gem.add_dependency 'omniauth-twitter'
   gem.add_dependency 'omniauth-facebook'
   gem.add_dependency 'omniauth-github'
