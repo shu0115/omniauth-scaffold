@@ -1,10 +1,11 @@
 # coding: utf-8
 require "omniauth-scaffold/version"
 require 'rails/generators'
+
+require 'rails_config'
 require 'omniauth-twitter'
 require 'omniauth-facebook'
 require 'omniauth-github'
-require 'rails_config'
 
 module Omniauth
   module Generators

@@ -19,12 +19,4 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'omniauth-twitter'
   gem.add_dependency 'omniauth-facebook'
   gem.add_dependency 'omniauth-github'
-
-  # gem.add_runtime_dependency 'omniauth-twitter'
-  # gem.add_runtime_dependency 'omniauth-facebook'
-  # gem.add_runtime_dependency 'omniauth-github'
-
-  # gem.add_development_dependency 'omniauth-twitter'
-  # gem.add_development_dependency 'omniauth-facebook'
-  # gem.add_development_dependency 'omniauth-github'
 end
