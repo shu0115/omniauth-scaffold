@@ -3,8 +3,8 @@
     <li class="navbar offset2 <%= params[:controller] == 'top' ? 'active' : '' %>"><%= link_to Settings.app_name, :root, class: "brand" %></li>
     <% unless session[:user_id].blank? %>
       <%# ログイン済み %>
-      <li><%= link_to_unless( current_user.screen_name.blank?, image_tag( current_user.image, size: "18x18", class: "margin_minus2" ), "#{Settings.provider_page}#{current_user.screen_name}", target: "_blank" ) %></li>
-      <li class="<%= params[:controller] == 'controllers' ? 'active' : '' %>"><%= link_to( "controllers", { controller: "controllers" } ) %></li>
+      <li><%= link_to_unless( current_user.nickname.blank?, image_tag( current_user.image, size: "18x18", class: "margin_minus2" ), "#{Settings.provider_page}#{current_user.nickname}", target: "_blank" ) %></li>
+      <li class="<%= params[:controller] == 'top' ? 'active' : '' %>"><%= link_to( "Top", { controller: "top" } ) %></li>
       <li><%= link_to( "Logout", logout_path ) %></li>
     <% else %>
       <%# 未ログイン %>
