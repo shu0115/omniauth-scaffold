@@ -3,9 +3,6 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  # httpsリダイレクト
-#  before_filter :ssl_redirect if Rails.env.production?
-
   # ログイン認証
   before_filter :authorize
 
@@ -13,20 +10,6 @@ class ApplicationController < ActionController::Base
   before_filter :reset_session_expires
 
   private
-
-  #--------------#
-  # ssl_redirect #
-  #--------------#
-=begin
-  # httpsへリダイレクト(Production環境のみ)
-  def ssl_redirect
-    unless request.env["HTTP_X_FORWARDED_PROTO"].to_s == "https"
-      request.env["HTTP_X_FORWARDED_PROTO"] = "https"
-
-      redirect_to request.url and return
-    end
-  end
-=end
 
   #-----------#
   # authorize #
