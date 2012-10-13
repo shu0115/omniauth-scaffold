@@ -18,6 +18,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Omniauth::Scaffold::VERSION
 
+  gem.add_dependency 'omniauth'
+  gem.add_dependency 'omniauth-oauth2'
   gem.add_dependency 'omniauth-twitter'
   gem.add_dependency 'omniauth-facebook'
   gem.add_dependency 'omniauth-github'
