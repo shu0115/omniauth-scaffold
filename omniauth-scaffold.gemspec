@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/omniauth-scaffold/version', __FILE__)
-require 'rails_config'
 require 'omniauth-twitter'
 require 'omniauth-facebook'
 require 'omniauth-github'
@@ -19,7 +18,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Omniauth::Scaffold::VERSION
 
-  gem.add_dependency 'rails_config', "0.3.0"
   gem.add_dependency 'omniauth-twitter'
   gem.add_dependency 'omniauth-facebook'
   gem.add_dependency 'omniauth-github'
