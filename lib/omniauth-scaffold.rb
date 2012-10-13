@@ -1,6 +1,10 @@
 # coding: utf-8
 require "omniauth-scaffold/version"
 require 'rails/generators'
+require 'omniauth-twitter'
+require 'omniauth-facebook'
+require 'omniauth-github'
+require 'rails_config'
 
 module Omniauth
   module Generators
@@ -32,7 +36,7 @@ module Omniauth
         content += "  match \"/logout\" => \"sessions#destroy\", :as => :logout\n"
         insert_into_file( "config/routes.rb", content.force_encoding('ASCII-8BIT'), after: "# first created -> highest priority.\n" )
         insert_into_file( "config/routes.rb", "  root to: 'top#index'\n", after: "# root :to => 'welcome#index'\n" )
-        insert_into_file( "config/routes.rb", "  match ':controller(/:action(/:id))(.:format)'\n", after: "# match ':controller(/:action(/:id))(.:format)'\n" )
+#        insert_into_file( "config/routes.rb", "  match ':controller(/:action(/:id))(.:format)'\n", after: "# match ':controller(/:action(/:id))(.:format)'\n" )
 
         # ----- application.rb ----- #
         content = "    config.time_zone = 'Tokyo'\n"
@@ -43,12 +47,15 @@ module Omniauth
         content += "    config.assets.initialize_on_precompile = false\n"
         insert_into_file( "config/application.rb", content.force_encoding('ASCII-8BIT'), after: "config.assets.version = '1.0'\n" )
 
+        # ----- production.rb ----- #
+        insert_into_file( "config/environments/production.rb", "  config.force_ssl = true\n", after: "# config.force_ssl = true\n" )  # 強制SSL設定
+
         # ----- development.rb ----- #
         content = "\n  # For LogRotate\n"
         content += "  config.logger = Logger.new( 'log/development.log', 5, 1*1024*1024 )  # 1MB * 5\n"
         insert_into_file( "config/environments/development.rb", content.force_encoding('ASCII-8BIT'), after: "config.assets.debug = true\n" )
-        gsub_file "config/environments/development.rb", /(config.assets.debug = true)+/, "# config.assets.debug = true"
-        insert_into_file( "config/environments/development.rb", "  config.assets.debug = false\n", after: "config.assets.debug = true\n" )
+        gsub_file "config/environments/development.rb", /(config.assets.debug = true)+/, "# config.assets.debug = true"  # コメントアウト追加
+        insert_into_file( "config/environments/development.rb", "  config.assets.debug = false\n", after: "config.assets.debug = true\n" )  # false設定追加
 
         # ----- ja.yml ----- #
         copy_file( "templates/ja.yml", "config/locales/ja.yml" )

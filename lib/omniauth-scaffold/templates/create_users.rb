@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :name
-      t.string :screen_name
+      t.string :nickname
       t.string :image
       t.string :token
       t.string :secret
