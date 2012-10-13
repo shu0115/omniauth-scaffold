@@ -1,5 +1,9 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/omniauth-scaffold/version', __FILE__)
+require 'omniauth-twitter'
+require 'omniauth-facebook'
+require 'omniauth-github'
+require 'rails_config'
 
 Gem::Specification.new do |gem|
   gem.authors       = ["shu0115"]
