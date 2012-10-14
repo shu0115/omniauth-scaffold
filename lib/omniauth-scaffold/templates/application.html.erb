@@ -1,6 +1,6 @@
   <%# グローバルメニュー %>
   <ul class="nav nav-tabs navbar-fixed-top backcolor_white padding_top10">
-    <li class="navbar offset2 <%= params[:controller] == 'top' ? 'active' : '' %>"><%= link_to Settings.app_name, :root, class: "brand" %></li>
+    <li class="navbar offset2 active"><%= link_to Settings.app_name, :root, class: "brand" %></li>
     <% unless session[:user_id].blank? %>
       <%# ログイン済み %>
       <li><%= link_to_unless( current_user.nickname.blank?, image_tag( current_user.image, size: "18x18", class: "margin_minus2" ), "#{Settings.provider_page}#{current_user.nickname}", target: "_blank" ) %></li>
