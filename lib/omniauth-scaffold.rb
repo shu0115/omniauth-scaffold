@@ -81,6 +81,7 @@ module Omniauth
         content = File.read( "#{@@gem_path}/templates/application.html.erb", encoding: Encoding::UTF_8 )
         gsub_file "app/views/layouts/application.html.erb", /(<%= yield %>)+/, content.force_encoding('ASCII-8BIT')
         gsub_file "app/views/layouts/application.html.erb", Regexp.new("<title>#{app_name}</title>"), "<title><%= Settings.app_name %></title>"
+        copy_file( "templates/_user_icon.html.erb", "app/views/layouts/_user_icon.html.erb" )
         copy_file( "templates/index.html.erb", "app/views/top/index.html.erb" )
 
         # ----- assets ----- #
