@@ -46,9 +46,9 @@ module Omniauth
 #        content += "    config.active_record.default_timezone = :local\n"
         insert_into_file( "config/application.rb", content.force_encoding('ASCII-8BIT'), after: "# config.time_zone = 'Central Time (US & Canada)'\n" )
         insert_into_file( "config/application.rb", "    config.i18n.default_locale = :ja\n", after: "# config.i18n.default_locale = :de\n" )
-        content = "\n    # For Heroku\n"
-        content += "    config.assets.initialize_on_precompile = false\n"
-        content += "\n    # For Tapp\n"
+        # content = "\n    # For Heroku\n"
+        # content += "    config.assets.initialize_on_precompile = false\n"
+        content = "\n    # For Tapp\n"
         content += "    Tapp.config.default_printer = :awesome_print\n"
         insert_into_file( "config/application.rb", content.force_encoding('ASCII-8BIT'), after: "config.assets.version = '1.0'\n" )
 
