@@ -64,6 +64,7 @@ module Omniauth
 
         # ----- ja.yml ----- #
         copy_file( "templates/ja.yml", "config/locales/ja.yml" )
+        copy_file( "templates/translation_ja.yml", "config/locales/translation_ja.yml" )
 
         # ----- create_users.rb ----- #
         copy_file( "templates/create_users.rb", "db/migrate/20000101000000_create_users.rb" )
