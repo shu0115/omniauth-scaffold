@@ -1,1 +1,3 @@
-<%= link_to_unless( user.nickname.blank?, image_tag( user.image, size: "18x18", class: "margin_minus2" ), "#{Settings.provider_page}#{user.nickname}", target: "_blank" ) %>
+<% if user.present? %>
+  <%= link_to_unless( user.nickname.blank?, image_tag( user.image, size: "18x18", class: "margin_minus2" ), "#{Settings.provider_page}#{user.nickname}", target: "_blank", rel: "tooltip", "data-original-title" => user.nickname ) %>
+<% end %>
