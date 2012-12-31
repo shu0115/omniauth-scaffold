@@ -1,6 +1,5 @@
 # coding: utf-8
 class SessionsController < ApplicationController
-
   #----------#
   # callback #
   #----------#
@@ -34,5 +33,4 @@ class SessionsController < ApplicationController
   def failure
     render text: "<span style='color: red;'>Auth Failure</span>"
   end
-
 end
