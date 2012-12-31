@@ -1,6 +1,5 @@
 # coding: utf-8
 class ApplicationController < ActionController::Base
-
   protect_from_forgery
 
   # ログイン認証
@@ -44,5 +43,4 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
-
 end
