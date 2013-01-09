@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   # current_user #
   #--------------#
   def current_user
-    @current_user ||= (User.where( id: session[:user_id] ).first || User.new)
+    @current_user ||= User.where( id: session[:user_id] ).first
   end
   helper_method :current_user
 end
