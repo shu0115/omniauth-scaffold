@@ -4,9 +4,9 @@ provider: "twitter"
 #provider: "github"
 
 # Provider Page
-provider_page: "https://twitter.com/"
-#provider_page: "https://www.facebook.com/"
-#provider_page: "https://github.com/"
+twitter_page: "https://twitter.com/"
+facebook_page: "https://www.facebook.com/"
+github_page: "https://github.com/"
 
 # アプリケーション名
 app_name: "YOUR_APP_NAME"
