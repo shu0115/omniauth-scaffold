@@ -9,3 +9,6 @@ facebook_app_secret: <%= ENV['FACEBOOK_APP_SECRET'] %>
 # GitHub OAuth Setting
 github_client_id: <%= ENV['GITHUB_CLIENT_ID'] %>
 github_secret:    <%= ENV['GITHUB_SECRET'] %>
+
+# Gmail Pass
+mail_password: <%= ENV['MAIL_PASSWORD'] %>
