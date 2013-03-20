@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
       self.image    = image_path
       self.email    = auth["info"]["email"]
       self.location = auth["info"]["location"]
-      self.save
+      self.save!
     end
   end
 
@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
       user.secret = auth['credentials']['secret']
     end
 
-    user.save
+    user.save!
 
     return user
   end
