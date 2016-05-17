@@ -1,3 +1,6 @@
+### This is not maintained.
+### Please use [minimum-omniauth-scaffold](https://github.com/shu0115/minimum-omniauth-scaffold)
+
 # Omniauth::Scaffold
 
 Scaffold for OmniAuth.
